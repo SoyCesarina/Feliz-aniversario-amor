@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="../img/like.png" type="image/x-icon">
+    <title>Feliz aniversario</title>
+
+</head>
+
+<body>
+
+    <style>
+
+        
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #fae1dd;
+            font-family: DM Serif Text, sans-serif;
+            margin: 0;
+        }
+
+        .contenedor {
+            position: relative;
+        }
+
+        .superior {
+            position: absolute;
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            border-top: 120px solid #f08080;
+            border-bottom: 120px solid transparent;
+
+            transition: transform .75s;
+            transform-origin: top;
+        }
+
+        .mensaje {
+            position: absolute;
+            padding: 1.5rem;
+            line-height: 1.5rem;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 25px;
+            background: #eae2b7;
+            width: 360px;
+            height: 240px;
+            z-index: -1;
+            transition: transform 0.75s ease-in-out;
+        }
+
+        .mensaje:before {
+            content: "";
+            border-style: dotted;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 55px;
+        }
+
+        .mensaje p {
+            position: relative;
+            top: -10px;
+            font-size: 1.5rem;
+        }
+
+        .carta {
+            border-left: 180px solid #f8ad9d;
+            border-right: 180px solid #f4978e;
+            border-top: 120px solid transparent;
+            border-bottom: 120px solid #f8ad9d;
+        }
+
+        .bx {
+            position: absolute;
+            color: #f6406a;
+            top: 90px;
+            right: 155px;
+            font-size: 50px;
+            animation: palpitar 0.6s linear infinite;
+        }
+
+        .psorpresa {
+            margin-top: -10px;
+            font-size: 1.4rem;
+        }
+
+        .botones {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .boton {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff66b2, #ff4081);
+            background-size: 200% 200%;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .boton:hover {
+            background-position: 100% 100%;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .abrir-superior {
+            transform: rotateX(180deg);
+        }
+
+        .abrir-mensaje {
+            transform: translateY(-100px);
+        }
+
+        .bx-rotada {
+            color: #f6406a;
+            animation: none;
+        }
+
+
+        @keyframes palpitar {
+            0% {
+                transform: scale(1.07);
+                /* Tamaño original */
+            }
+
+            80% {
+                transform: scale(1.0);
+                /* Aumentar el tamaño un poco */
+            }
+
+            100% {
+                transform: scale(1.08);
+                /* Regresar al tamaño original */
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .mensaje:before {
+                content: "";
+                border-style: dotted;
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                right: 12px;
+                bottom: 45px;
+            }
+
+            .mensaje p {
+                position: relative;
+                top: -15px;
+                font-size: 1rem;
+            }
+        }
+
+        .parrafo2{
+
+            font-size: 25px;
+            font-style: italic;
+            font-weight: bold;
+            justify-items: center;
+            justify-items: center;
+        }
+    </style>
+
+    <h1>¡Ya es un año de los muchos que nos falta!❤️</h1> <br>
+    <p class="psorpresa">Una pequeña sorpresa para ti...</p>
+  <br>
+
+    <div class="contenedor" id="AbrirContenedor">
+        <div class="superior"></div>
+        <div class="mensaje">
+
+            Gracias siempre por tenerme pasciencia, ayudarme y siempre estar.
+            <br><br><br>
+
+            
+        </div>
+        <div class="carta">
+            <i class="bx bxs-heart"></i>
+        </div>
+    </div> <br> 
+
+    
+   <p class="parrafo2"> Hoy te regalo esta carta para mi amor mas lindo, <br> porque no queria pasar por alto los 5 años que
+    llevamos conociendonos, <br> en el cual 1 de esos años celebramos lo que seria ya 1 año de novios. ¡TE AMO!  </p> <br>
+
+    <div class="botones">
+        <button class="boton" id="Abrir">Abrir</button>
+        <button class="boton" id="Cerrar">Cerrar</button>
+        <a href="../si.html"><button class="boton" id="Cerrar">Volver atr&aacute;s</button></a>
+    </div>
+
+    <script>
+
+        const btnAbrir = document.querySelector("#Abrir");
+        const btnCerrar = document.querySelector("#Cerrar");
+
+        //Abrir Carta
+        btnAbrir.addEventListener("click", () => {
+            const ElementoSuperior = document.querySelector(".superior");
+            ElementoSuperior.classList.add("abrir-superior");
+
+            const h1 = document.querySelector("h1");
+            const p = document.querySelector("p");
+            h1.style.transform = "translateY(-120px)";
+            p.style.transform = "translateY(-120px)";
+            h1.style.transition = "transform 0.65s ease-in-out";
+            p.style.transition = "transform 0.65s ease-in-out";
+
+            const IconoCorazon = document.querySelector(".bx");
+            IconoCorazon.classList.add("bx-rotada");
+
+            setTimeout(() => {
+                ElementoSuperior.style.zIndex = -1;
+                const ElementoMensaje = document.querySelector(".mensaje");
+                ElementoMensaje.classList.add("abrir-mensaje");
+            }, 700);
+        });
+
+        //Cerrar Carta
+        btnCerrar.addEventListener("click", () => {
+            const ElementoSuperior = document.querySelector(".superior");
+
+            const ElementoMensaje = document.querySelector(".mensaje");
+            ElementoMensaje.classList.remove("abrir-mensaje");
+
+            setTimeout(() => {
+                const h1 = document.querySelector("h1");
+                const p = document.querySelector("p");
+                h1.style.transform = "translateY(0px)";
+                p.style.transform = "translateY(0px)";
+
+                ElementoSuperior.style.zIndex = 0;
+                ElementoSuperior.classList.remove("abrir-superior");
+
+                const IconoCorazon = document.querySelector(".bx");
+                IconoCorazon.classList.remove("bx-rotada");
+            }, 700);
+        });
+
+        // Con click en la carta
+        const contenedor = document.querySelector("#AbrirContenedor");
+        // Abrir carta al hacer click en el contenedor
+        contenedor.addEventListener("click", () => {
+            const ElementoSuperior = document.querySelector(".superior");
+            ElementoSuperior.classList.add("abrir-superior");
+
+            const h1 = document.querySelector("h1");
+            const p = document.querySelector("p");
+            h1.style.transform = "translateY(-120px)";
+            p.style.transform = "translateY(-120px)";
+            h1.style.transition = "transform 0.65s ease-in-out";
+            p.style.transition = "transform 0.65s ease-in-out";
+
+            const IconoCorazon = document.querySelector(".bx");
+            IconoCorazon.classList.add("bx-rotada");
+
+            setTimeout(() => {
+                ElementoSuperior.style.zIndex = -1;
+                const ElementoMensaje = document.querySelector(".mensaje");
+                ElementoMensaje.classList.add("abrir-mensaje");
+            }, 700);
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/like.png" type="image/x-icon">
+    <title>Feliz aniversario</title>
+
+</head>
+
+<body>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+
+        .chat {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: #f1f0e8;
+        }
+
+        .chat-header {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .profile {
+            width: 100%;
+            background: #036055;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            padding: 0px 10px;
+            position: relative;
+        }
+
+        .profile .pp {
+            width: 50px;
+            display: inline-block;
+            border-radius: 50%;
+            margin-left: 32px;
+        }
+
+        .profile .arrow {
+            display: inline-block;
+            width: 30px;
+            position: absolute;
+            top: 19px;
+            cursor: pointer;
+        }
+
+        .profile h2 {
+            display: inline-block;
+            line-height: 60px;
+            vertical-align: bottom;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .profile span {
+            color: #ccc;
+            position: absolute;
+            top: 42px;
+            left: 100px;
+            font-size: 14px;
+        }
+
+        .right .icon {
+            display: inline-block;
+            width: 25px;
+            margin-left: 10px;
+        }
+
+        .profile .left {
+            flex: 1;
+        }
+
+        .chat-box {
+            background: url('../img/bg.jpeg');
+            background-attachment: fixed;
+            padding-left: 20px;
+            overflow-y: scroll;
+            flex: 1;
+        }
+
+        .chat-box .img_chat {
+            width: 280px;
+        }
+
+        .chat-r {
+            display: flex;
+        }
+
+        .chat-r .sp {
+            flex: 1;
+        }
+
+        .chat-l {
+            display: flex;
+        }
+
+        .chat-l .sp {
+            flex: 1;
+        }
+
+        .chat-box .mess {
+            max-width: 300px;
+            background: #F7FCF6;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 20px 0px;
+            cursor: pointer;
+        }
+
+        .chat-box .mess p {
+            word-break: break-all;
+            font-size: 18px;
+        }
+
+        .chat-box .mess-r {
+            background: #E2FFC7;
+        }
+
+        .chat-box .emoji {
+            width: 20px;
+        }
+
+        .chat-box .check {
+            float: right;
+        }
+
+        .chat-box .check img {
+            width: 20px;
+        }
+
+        .chat-box .check span {
+            color: #888;
+            font-size: 12px;
+            font-weight: 700px;
+        }
+
+        *::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background: #aaa;
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .chat-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 60px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .chat-footer textarea {
+            display: block;
+            flex: 1;
+            width: 100%;
+            height: 50px;
+            border-radius: 60px;
+            margin: 5px;
+            padding: 10px;
+            outline: none;
+            font-size: 19px;
+            padding-left: 40px;
+            padding-right: 90px;
+            border: 2px solid #ccc;
+            color: #555;
+            resize: none;
+        }
+
+        .chat-footer .mic {
+            display: block;
+            width: 55px;
+            height: 55px;
+            margin-right: 20px;
+        }
+
+        .chat-footer .emo {
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 10px;
+            top: 12px;
+        }
+
+        .chat-footer .icons {
+            position: absolute;
+            right: 100px;
+            top: 10px;
+        }
+
+        .chat-footer .icons img {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            margin-left: 5px;
+        }
+    </style>
+    <div class="container">
+        <div class="chat">
+            <div class="chat-header">
+                <div class="profile">
+                    <div class="left">
+                        <img src="img/arrow.png" class="arrow">
+                        <img src="img/pp.png" class="pp">
+                        <h2>Carboncito</h2>
+                        <span>online</span>
+                    </div>
+                    <div class="right">
+                        <img src="img/video.png" class="icon">
+                        <img src="img/phone.png" class="icon">
+                        <img src="img/more.png" class="icon">
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box">
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <p>
+                            ¡Hola mi amor! creé este pequeño espacio para revivir
+                            algunos de <br> tantos y tan solo un poco de <br> nuestros recuerdos hermosos
+                            <br> juntos. ❤️
+                        </p>
+                        <div class="check">
+                            <span>12:00 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-l">
+                    <div class="mess">
+                        <p>
+                            Claro, me encantaría
+                        </p>
+                        <div class="check">
+                            <span>12:02 AM</span>
+                        </div>
+                    </div>
+                    <div class="sp"></div>
+                </div>
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        
+                        <p>
+                            ¿Recuerdas nuestra aventura en Santo Domingo?
+                        </p>
+                        <div class="check">
+                            <span>12:05 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="chat-l">
+                    <div class="mess">
+                        <p>¡Sí, claro!</p>
+                        <div class="check">
+                            <span>12:06 AM</span>
+                        </div>
+                    </div>
+                    <div class="sp"></div>
+                </div>
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <img src="img/post6.jpg" class="img_chat">
+                        <p>
+                            ¡Qué dia! No pude dejar de ver <br> estas fotos por semanas, <br> de nosotros.
+                        </p>
+                        <div class="check">
+                            <span>12:08 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <img src="img/post3.jpg" class="img_chat">
+                        <p>
+                            Quede encantada con esta otra <br> tambien, tu y yo juntos sentandos <br> junto al mar.
+                        </p>
+                        <div class="check">
+                            <span>12:09 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <img src="img/post4.jpg" class="img_chat">
+                        <p>
+                            Cuando te hiceron tomarte esta a <br> la fuerza. En esas estas muy <br> bonito, me gusta
+                            verte sonreir.
+                        </p>
+                        <div class="check">
+                            <span>12:10 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="chat-l">
+                    <div class="mess">
+                        <p>
+                            ahahahahah, no quedo de otra. <br> XD
+                        </p>
+                        <div class="check">
+                            <span>12:15 AM</span>
+                        </div>
+                    </div>
+                    <div class="sp"></div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <p>Vamos seguir recordando tan solo algunos,
+                            son tantos hermosos <br> momentos,
+                            que lamentablemente no lo adjunte todos.</p>
+                        <div class="check">
+                            <span>12:16 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                       
+                        <p>
+                            Recuerdo tantos momentos juntos a tu lado tan maravillosos...
+                        </p>
+                        <div class="check">
+                            <span>12:10 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <img src="img/post1.jpg" class="img_chat">
+                        <p>
+                            Todas las veces que me sentia <br>feliz, cada que me invitabas a tu <br> casa, 
+                            no podria dejar de pensar <br> que nos veriamos.
+                        </p>
+                        <div class="check">
+                            <span>12:11 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <img src="img/post7.jpg" class="img_chat">
+                        <p>
+                            Se volvi&oacute; hasta una rutina <br> reunirnos en tu casa todos 
+                            los <br> fines de semanas desde que nos <br> conocimos...
+                        </p>
+                        <div class="check">
+                            <span>12:12 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-l">
+                    <div class="mess">
+                        <p>
+                            ¡Qué increíble! Fue muy especial. 
+                            ¿Cómo olvidar esa experiencia?
+                        </p>
+                        <div class="check">
+                            <span>12:15 AM</span>
+                        </div>
+                    </div>
+                    <div class="sp"></div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <img src="img/post2.jpg" class="img_chat">
+                        <p>
+                            ¡Me alegra que te haya gustado!
+                            
+                        </p>
+                        <div class="check">
+                            <span>12:16 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <p>
+                          
+                            ¿Recuerdas cuándo te dije  <br> 'te amo' por primera vez? Nunca <br> en mi vida pens&eacute;
+                            decirle esas <br> palabras a alguien y contigo me <br> sale todo tan natural.
+                        </p>
+                        <div class="check">
+                            <span>12:16 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-l">
+                    <div class="mess">
+                        <p>
+                            Sí, toda esta aventura que <br> empez&oacute; en 2021
+                        </p>
+                        <div class="check">
+                            <span>12:18 AM</span>
+                        </div>
+                    </div>
+                    <div class="sp"></div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+
+                        <img src="img/bar.png" class="img_chat">
+                        <p>
+                          
+                            Sí, los increible amigos, las locas noches en el bar, los karaokes, la salidas...
+
+                        </p>
+                        <div class="check">
+                            <span>12:20 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+
+                        <img src="img/post9.jpg" class="img_chat">
+
+                       
+                        <div class="check">
+                            <span>12:21 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+
+          
+                        <img src="img/post10.jpg" class="img_chat">
+    
+                       
+                        <div class="check">
+                            <span>12:22 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+
+
+                        <img src="img/post11.jpg" class="img_chat">
+                       
+                        <div class="check">
+                            <span>12:23 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <p>
+                          
+                            ¡Qué lindo! Todos y cada unos de nuestros 
+                            momentos son los que <br> siempre llevo y atesoro en mi <br> corazón.
+
+                        </p>
+                        <div class="check">
+                            <span>12:25 AM</span>
+                            <img src="img/check-2.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <div class="chat-l">
+                    <div class="mess">
+                        <p>
+                            Amor. Cada día contigo es <br> especial. Lo quiero todo contigo, 
+                           <br> nunca siento que lo demuestro <br> como tal, por mi forma y si quiero que estemos bien tu y yo... 
+                            Yo <br> te amo demasiado de verdad, <br> mucho muchooooo.
+                        </p>
+                        <div class="check">
+                            <span>12:30 AM</span>
+                        </div>
+                    </div>
+                    <div class="sp"></div>
+                </div>
+
+
+
+
+
+ 
+                <div class="chat-r">
+                    <div class="sp"></div>
+                    <div class="mess mess-r">
+                        <p>
+                            Vamos seguir formando mas <br> maravillosos recuerdos con lo <br> largo de los años, quiero seguir a <br> tu lado siempre.
+                            tan solo esto es el comienzo, del gran camino que <br> nos queda por recorrer juntos...
+                        </p>
+                        <div class="check">
+                            <span>12:32 AM</span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="chat-footer">
+                <img src="img/emo.png" class="emo">
+                <textarea placeholder="Type a message"></textarea>
+                <div class="icons">
+                    <img src="img/attach file.png">
+                    <img src="img/camera.png">
+                </div>
+                <img src="img/mic.png" class="mic">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

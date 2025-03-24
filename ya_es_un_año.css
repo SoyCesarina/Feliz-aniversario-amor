@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222f3e;
+    position: relative;
+   
+}
+
+.heart {
+
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #ff4757;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #ff4757;
+    animation: animacion_corazon .6s linear infinite;
+}
+
+
+@keyframes animacion_corazon {
+
+    0% {
+
+        transform: rotate(-45deg) scale(1.07);
+    }
+
+    80% {
+
+        transform: rotate(-45deg) scale(1.0);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+
+
+.heart::before {
+
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100px;
+    height: 100px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px -10px 90px #ff4757;
+
+}
+
+
+.heart::after {
+
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 100px;
+    height: 100px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: 10px 10px 90px #ff4757;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+}
+
+.heart {
+    display: flex;
+    max-width: 200px;
+}
+
+.container .btn {
+    display: flex;
+    gap: 25px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #626567;
+    font-size: 25px;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0, 0,0.3);
+    border: 3px black;
+    text-decoration: none;
+    
+
+
+}
+
+.btn2:hover{
+
+    font-size: 30px;
+    color: #ff4757;
+    text-shadow: 2px 2px 5px black;
+    text-decoration: none;
+
+
+}
+
+
+.titulo1{
+
+    color: white;
+    font-size: 40px;
+    text-shadow: -2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000;
+}
+
+.parrafo{
+
+    color: #f2f3f4;
+    font-size: 27px;
+    
+
+}
